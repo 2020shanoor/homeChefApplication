@@ -13,7 +13,9 @@
 	<div class="container-fluid">
 		<div class="row mt-3">
 			<div class="col-md-4 offset-md-4">
+			
 				<div class="card">
+				<%@include file="successRegister.jsp"%>
 					<div class="card-body px-5">
 						<center>
 							<img src="image/register.png" height="80" width="80">

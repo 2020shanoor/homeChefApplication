@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -43,8 +44,12 @@ public class UserRegisterController extends HttpServlet {
 
 			tx.commit();
 			hibernateSession.close();
-			out.print("Successfully Saved !!");
-			out.print("<br/>User Id is" + userId);
+
+			HttpSession httpSession =  request.getSession();
+			httpSession.setAttribute("message", "Register Successfull !! " +userId );
+			response.sendRedirect("register.jsp");
+
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
