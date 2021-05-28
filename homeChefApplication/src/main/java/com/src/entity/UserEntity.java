@@ -32,6 +32,9 @@ public class UserEntity {
 	@Column(name = "user_address")
 	private String userAddress;
 
+	@Column(name = "user_type")
+	private String userType;
+
 	public int getUserId() {
 		return userId;
 	}
@@ -88,8 +91,16 @@ public class UserEntity {
 		this.userAddress = userAddress;
 	}
 
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
 	public UserEntity(int userId, String userName, String userEmail, String userPassword, String userPhone,
-			String userPhoto, String userAddress) {
+			String userPhoto, String userAddress, String userType) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -98,10 +109,11 @@ public class UserEntity {
 		this.userPhone = userPhone;
 		this.userPhoto = userPhoto;
 		this.userAddress = userAddress;
+		this.userType = userType;
 	}
 
 	public UserEntity(String userName, String userEmail, String userPassword, String userPhone, String userPhoto,
-			String userAddress) {
+			String userAddress, String userType) {
 		super();
 		this.userName = userName;
 		this.userEmail = userEmail;
@@ -109,6 +121,7 @@ public class UserEntity {
 		this.userPhone = userPhone;
 		this.userPhoto = userPhoto;
 		this.userAddress = userAddress;
+		this.userType = userType;
 	}
 
 	public UserEntity() {
@@ -119,9 +132,7 @@ public class UserEntity {
 	public String toString() {
 		return "UserEntity [userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userPhoto=" + userPhoto
-				+ ", userAddress=" + userAddress + "]";
+				+ ", userAddress=" + userAddress + ", userType=" + userType + "]";
 	}
-	
-	
 
 }
