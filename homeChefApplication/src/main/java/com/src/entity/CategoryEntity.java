@@ -48,6 +48,10 @@ public class CategoryEntity {
 		this.products = products;
 	}
 
+	
+	public CategoryEntity() {
+	}
+
 	public int getCategoryId() {
 		return categoryId;
 	}

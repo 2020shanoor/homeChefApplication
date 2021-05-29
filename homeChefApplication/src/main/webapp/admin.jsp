@@ -25,7 +25,7 @@
 </head>
 <body>
 	<%@include file="components/navbar.jsp"%>
-	<div class="container">
+	<div class="container admin">
 
 		<div class="row mt-2">
 			<!-- First ROW -->
@@ -81,13 +81,14 @@
 			<div class="col-md-6">
 				<!-- First box -->
 
-				<div class="card">
+				<div class="card" data-bs-toggle="modal"
+					data-bs-target="#add-category-model">
 					<div class="card-body text-center">
 						<div class="container">
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
-								alt="User" src="image/keys.png">
+								alt="Add Category" src="image/keys.png">
 						</div>
-						<p class="mt-2">Click here to add New Category</p>
+						<p class="mt-2">Click here to add New Category.</p>
 						<h1 class="text-uppercase text-muted">Add Category</h1>
 					</div>
 				</div>
@@ -95,20 +96,23 @@
 			</div>
 			<!-- Second box -->
 			<div class="col-md-6">
-				<div class="card">
+				<div class="card" data-bs-toggle="modal"
+					data-bs-target="#add-product-model">
 					<div class="card-body text-center">
 						<div class="container">
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
-								alt="User" src="image/plus.png">
+								alt="Add Product" src="image/plus.png">
 						</div>
-						<p class="mt-2">Click here to add New Category</p>
+						<p class="mt-2">Click here to add New Product.</p>
 						<h1 class="text-uppercase text-muted">Add Product</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
+	<!-- Add Category -->
+	<%@include file="addCategory.jsp"%>
+	<%@include file="addProducts.jsp"%>
+	<!-- End Category -->
 </body>
 </html>

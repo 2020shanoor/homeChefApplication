@@ -34,4 +34,14 @@
     <servlet-name>UserLogoutController</servlet-name>
     <url-pattern>/userLogoutController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminAddProductCategory</display-name>
+    <servlet-name>AdminAddProductCategory</servlet-name>
+    <servlet-class>com.src.controller.AdminAddProductCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminAddProductCategory</servlet-name>
+    <url-pattern>/abcd</url-pattern>  
+  </servlet-mapping>
 </web-app>
