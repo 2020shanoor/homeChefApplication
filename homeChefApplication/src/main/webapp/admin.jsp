@@ -26,6 +26,9 @@
 <body>
 	<%@include file="components/navbar.jsp"%>
 	<div class="container admin">
+		<div class="container-fluid mt-3">
+		<%@include file="components/message.jsp"%>
+		</div>
 
 		<div class="row mt-2">
 			<!-- First ROW -->

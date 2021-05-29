@@ -62,8 +62,8 @@
 								</select>
 							</div>
 							<div class="container text-center mt-2">
-								<button class="btn btn-outline-success">Register</button>
-								<button class="btn btn-outline-warning">Reset</button>
+								<button type="submit" class="btn btn-outline-success">Register</button>
+								<button type="reset" class="btn btn-outline-warning">Reset</button>
 							</div>
 						</form>
 

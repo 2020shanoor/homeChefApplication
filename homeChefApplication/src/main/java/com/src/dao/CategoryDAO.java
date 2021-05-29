@@ -1,10 +1,14 @@
 package com.src.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.src.entity.CategoryEntity;
+import com.src.entity.UserEntity;
 
 public class CategoryDAO {
 	private SessionFactory factory;
@@ -15,11 +19,19 @@ public class CategoryDAO {
 
 	// Save to DB
 	public int saveCategory(CategoryEntity cat) {
-		Session session = this.factory.openSession();
-		Transaction tx = session.beginTransaction();
-		int catId = (Integer) session.save(cat);
+		Session saveSession = this.factory.openSession();
+		Transaction tx = saveSession.beginTransaction();
+		int catId = (Integer) saveSession.save(cat);
 		tx.commit();
-		session.close();
+		saveSession.close();
 		return catId;
+	}
+	
+	// To get the Category List in Dropdown for New product entry.
+	public List<CategoryEntity> getCategories() {
+		Session listSession = this.factory.openSession();
+		Query listQuery= listSession.createQuery("from CategoryEntity");
+		List<CategoryEntity> list = listQuery.list();
+		return list;
 	}
 }

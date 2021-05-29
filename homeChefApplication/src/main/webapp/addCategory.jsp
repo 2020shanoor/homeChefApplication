@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="add-category-model" tabindex="-1"
 	aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header custom-bg text-white">
 				<h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
@@ -18,7 +18,7 @@
 					</div>
 					<div class="form-group">
 						Enter Category Description:
-						<textarea name="category_desc" style="height: 300px;"
+						<textarea name="category_desc" style="height: 200px;"
 							placeholder="Please enter Category Description."
 							class="form-control" required></textarea>
 					</div>
