@@ -14,4 +14,24 @@
     <servlet-name>UserRegisterController</servlet-name>
     <url-pattern>/userRegisterController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLoginController</display-name>
+    <servlet-name>UserLoginController</servlet-name>
+    <servlet-class>com.src.controller.UserLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginController</servlet-name>
+    <url-pattern>/userLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLogoutController</display-name>
+    <servlet-name>UserLogoutController</servlet-name>
+    <servlet-class>com.src.controller.UserLogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogoutController</servlet-name>
+    <url-pattern>/userLogoutController</url-pattern>
+  </servlet-mapping>
 </web-app>

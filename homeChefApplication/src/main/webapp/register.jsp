@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>New User Registration</title>
+<title>Home Chef - New User Registration</title>
 <%@include file="components/common_css_js.jsp"%>
 
 </head>
@@ -15,7 +15,7 @@
 			<div class="col-md-4 offset-md-4">
 			
 				<div class="card">
-				<%@include file="successRegister.jsp"%>
+				<%@include file="components/message.jsp"%>
 					<div class="card-body px-5">
 						<center>
 							<img src="image/register.png" height="80" width="80">
@@ -31,7 +31,7 @@
 							<div class="form-group">
 								<label for="email">Email</label> <input type="email"
 									class="form-control" id="email" name="user_email"
-									placeholder="Enter your EmailId here.">
+									placeholder="Enter your Email Id here.">
 							</div>
 
 							<div class="form-group">
@@ -54,15 +54,14 @@
 								</textarea>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-2">
 								<label for="usertype">Type</label> <select name="user_type"
 									id="user_type">
-									<option value="user">User</option>
+									<option value="user">Normal User</option>
 									<option value="admin">Admin</option>
 								</select>
 							</div>
-							<hr />
-							<div class="container text-center">
+							<div class="container text-center mt-2">
 								<button class="btn btn-outline-success">Register</button>
 								<button class="btn btn-outline-warning">Reset</button>
 							</div>
