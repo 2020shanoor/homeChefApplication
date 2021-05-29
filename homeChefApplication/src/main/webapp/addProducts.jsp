@@ -10,8 +10,8 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<input type="hidden" value="addProduct" name="addProdCatOperation">
-				<form>
+				<form action="adminAddProductCategory" method="post" enctype="multipart/form-data">
+				<input type="hidden" value="addproduct" name="operation" >
 					<div class="form-group mt-2">
 						Enter Product Name: <input type="text" name="product_name"
 							placeholder="Please enter Product Name." class="form-control"

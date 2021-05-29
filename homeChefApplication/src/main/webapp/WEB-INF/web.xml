@@ -42,6 +42,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminAddProductCategory</servlet-name>
-    <url-pattern>/abcd</url-pattern>  
+    <url-pattern>/adminAddProductCategory</url-pattern>  
   </servlet-mapping>
 </web-app>

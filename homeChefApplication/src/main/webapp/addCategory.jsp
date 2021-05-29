@@ -9,7 +9,7 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form action="abcd" method="post">
+				<form action="adminAddProductCategory" method="post">
 				<input type="hidden" value="addCategory" name="operation" >
 					<div class="form-group">
 						Enter Category Title: <input type="text" name="category_title"

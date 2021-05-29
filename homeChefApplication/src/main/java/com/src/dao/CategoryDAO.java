@@ -26,12 +26,24 @@ public class CategoryDAO {
 		saveSession.close();
 		return catId;
 	}
-	
+
 	// To get the Category List in Dropdown for New product entry.
 	public List<CategoryEntity> getCategories() {
 		Session listSession = this.factory.openSession();
-		Query listQuery= listSession.createQuery("from CategoryEntity");
+		Query listQuery = listSession.createQuery("from CategoryEntity");
 		List<CategoryEntity> list = listQuery.list();
 		return list;
+	}
+
+	public CategoryEntity getCategoryEntity(int cId) {
+		CategoryEntity cat = null;
+		try {
+			Session session = this.factory.openSession();
+			cat = (CategoryEntity) session.get(CategoryEntity.class, cId);
+			session.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return cat;
 	}
 }

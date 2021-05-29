@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.src.entity.CategoryEntity;
+import com.src.entity.ProductEntity;
 
 public class ProductDAO {
 	private SessionFactory factory;
@@ -14,13 +15,13 @@ public class ProductDAO {
 	}
 
 	// Save to DB
-	public int saveCategory(CategoryEntity cat) {
+	public int saveProduct(ProductEntity productEnt) {
 		Session session = this.factory.openSession();
 		Transaction tx = session.beginTransaction();
-		int catId = (Integer) session.save(cat);
+		int prodId = (Integer) session.save(productEnt);
 		tx.commit();
 		session.close();
-		return catId;
+		return prodId;
 	}
 
 }

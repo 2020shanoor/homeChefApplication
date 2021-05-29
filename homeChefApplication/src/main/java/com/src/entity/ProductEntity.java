@@ -68,6 +68,10 @@ public class ProductEntity {
 		this.categoryEntity = categoryEntity;
 	}
 
+	public ProductEntity() {
+		super();
+	}
+
 	public CategoryEntity getCategoryEntity() {
 		return categoryEntity;
 	}

@@ -22,41 +22,41 @@
 						</center>
 						<h3 class="text-center my-3">Sign up Here !!</h3>
 						<form action="userRegisterController" method="post">
-							<div class="form-group">
-								<label for="username">User Name</label> <input type="text"
+							<div class="form-group mt-2">
+								<label for="username">Name</label> <input type="text"
 									class="form-control" id="username" name="user_name"
 									placeholder="Enter your username here.">
 							</div>
 
-							<div class="form-group">
-								<label for="email">Email</label> <input type="email"
+							<div class="form-group mt-2">
+								<label for="email">Email Id</label> <input type="email"
 									class="form-control" id="email" name="user_email"
 									placeholder="Enter your Email Id here.">
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-2">
 								<label for="password">Password</label> <input type="password"
 									class="form-control" id="password" name="user_password"
 									placeholder="Enter your password here.">
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-2">
 								<label for="phone">Phone Number</label> <input type="number"
 									class="form-control" id="phone" name="user_phone"
 									placeholder="Enter your phone number here.">
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-2">
 								<label for="address">Address</label>
 								<textarea style="height: 120px;" class="form-control"
-									id="address" name="user_address"
+									id="address" name="user_address" 
 									placeholder="Enter your address here.">
 								</textarea>
 							</div>
 
 							<div class="form-group mt-2">
 								<label for="usertype">Type</label> <select name="user_type"
-									id="user_type">
+									id="user_type" class="form-control" >
 									<option value="user">Normal User</option>
 									<option value="admin">Admin</option>
 								</select>
