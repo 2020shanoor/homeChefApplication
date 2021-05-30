@@ -1,5 +1,8 @@
 package com.src.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -24,4 +27,11 @@ public class ProductDAO {
 		return prodId;
 	}
 
+	// To get the Category List in Dropdown for New product entry.
+	public List<ProductEntity> getProduct() {
+		Session listSession = this.factory.openSession();
+		Query listQuery = listSession.createQuery("from ProductEntity");
+		List<ProductEntity> list = listQuery.list();
+		return list;
+	}
 }
