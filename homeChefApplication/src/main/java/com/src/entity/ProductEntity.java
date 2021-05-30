@@ -72,6 +72,18 @@ public class ProductEntity {
 		super();
 	}
 
+	/**
+	 * Calculate Price after discount
+	 * 
+	 * @return
+	 */
+
+	public int getPriceAfterApplyingDiscount() {
+		int discount = (int) ((this.getProductDiscount() / 100.0) * this.getProductPrice());
+		return this.getProductPrice() - discount;
+
+	}
+
 	public CategoryEntity getCategoryEntity() {
 		return categoryEntity;
 	}

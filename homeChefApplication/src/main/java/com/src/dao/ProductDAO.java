@@ -27,11 +27,20 @@ public class ProductDAO {
 		return prodId;
 	}
 
-	// To get the Category List in Dropdown for New product entry.
-	public List<ProductEntity> getProduct() {
+	// To get the ALL Category List in Dropdown for New product entry.
+	public List<ProductEntity> getAllProduct() {
 		Session listSession = this.factory.openSession();
 		Query listQuery = listSession.createQuery("from ProductEntity");
 		List<ProductEntity> list = listQuery.list();
 		return list;
 	}
+	
+	// To get All products based on ID / Category.
+		public List<ProductEntity> getAllProductById(int cid) {
+			Session listSession = this.factory.openSession();
+			Query listQuery = listSession.createQuery("from ProductEntity as p where p.categoryEntity.categoryId =:id");
+			listQuery.setParameter("id", cid);
+			List<ProductEntity> list = listQuery.list();
+			return list;
+		}
 }

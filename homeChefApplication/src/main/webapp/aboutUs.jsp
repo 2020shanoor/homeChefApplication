@@ -8,7 +8,8 @@
 <%@include file ="components/common_css_js.jsp" %>
 </head>
 <body>
-<%@include file ="components/common_css_js.jsp" %>
+<%@include file ="components/navbar.jsp" %>
 <h1> About Us Page </h1>
+	<%@include file ="components/common_modals.jsp" %>
 </body>
 </html>
