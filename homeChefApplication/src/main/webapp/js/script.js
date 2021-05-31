@@ -56,7 +56,7 @@ function updateCart() {
 		console.log ("CART IS EMPTY!!");
 	$(".cart-items").html("( 0 )");
 	$(".cart-body").html("<h3>Cart Does not have any items.</h3>");
-	$(".checkout-btn").addClass('disabled');
+	$(".checkout-btn").attr('disabled',true);
 	} else {
 		// There is some thing in cart to show
 		console.log (cart);
@@ -96,6 +96,7 @@ function updateCart() {
 		<tr><td colspan='5' class='text-right font-weight-bold m5'>Total Price : ${totalPrice}</td></tr>
 		</table>`	
 		$(".cart-body").html(table);
+		$(".checkout-btn").attr('disabled',false);
 			
 			
 	}
@@ -105,7 +106,7 @@ function updateCart() {
 function deleteItemFromCart(pid) {
 	let cart = JSON.parse(localStorage.getItem('cart'));
 	let newCart = cart.filter((item)=> item.productId != pid)
-	localStorage.setItem('cart',JSON.stringify(newcart))
+	localStorage.setItem('cart',JSON.stringify(newCart))
 	updateCart();	
 	showToast("Product is removed from cart.");
 }

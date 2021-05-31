@@ -15,9 +15,9 @@
 			</div>
 			<div class="modal-footer">
 				<div class="text-right mt-2">
-					<button type="button" class='btn btn-outline-success'>Check
-						Out</button>
-					<button type="button" class='btn btn-secondary checkout-btn'>Close</button>
+					<button type="button" class="btn btn-secondary" data-disable = "modal">Close</button>
+					<button type="button" class="btn btn-primary checkout-btn"><a href ="checkOut.jsp" class ="text-white" >Check
+						Out</a></button>
 				</div>
 			</div>
 		</div>
