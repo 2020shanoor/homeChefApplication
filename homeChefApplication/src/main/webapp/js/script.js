@@ -73,6 +73,7 @@ function updateCart() {
 		
 		
 		`;
+		let totalPrice=0;
 		cart.map((item)=> {
 			table+=`
 			<tr>
@@ -84,10 +85,13 @@ function updateCart() {
 			</tr>
 			
 			`
-			
+			totalPrice+=item.productPrice*item.productQuantity;
 		})
 			
-		table =table+`</table>`	
+		table =table+`
+		
+		<tr><td colspan='5' class='text-right font-weight-bold m5'>Total Price : ${totalPrice}</td></tr>
+		</table>`	
 		$(".cart-body").html(table);
 			
 			
