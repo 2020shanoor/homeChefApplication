@@ -2,7 +2,7 @@
 <%
 	UserEntity user1 = (UserEntity) session.getAttribute("current-user");
 %>
-
+	
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-light custom-bg">
 	<div class="container">
@@ -31,16 +31,18 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 
-						
-						<li class="nav-item active"> 
-						<a class="nav-link" href="#!" data-toggle="modal" data-target="#cart"><i class ="fa fa-cart-plus"
-						style="font-size: 20px;"> </i> <span class="ml-0 cart-item" >( 0 )</span></a></li>
-					
-					
-					
-						 <%
- 	if (user1 == null) {
- %>
+
+				<li class="nav-item active"><a class="nav-link" href="#!"
+					data-bs-toggle="modal"
+					data-bs-target="#add-cart-model"><i
+						class="fa fa-cart-plus" style="font-size: 20px;"> </i> <span
+						class="ml-0 cart-items">( 0 )</span></a></li>
+
+
+
+				<%
+					if (user1 == null) {
+				%>
 				<li class="nav-item active"><a class="nav-link"
 					href="login.jsp">Login</a></li>
 				<li class="nav-item active"><a class="nav-link"
@@ -60,3 +62,4 @@
 		</div>
 	</div>
 </nav>
+<%@include file ="common_modals.jsp" %>
