@@ -40,10 +40,26 @@ function add_to_cart(pid, pname, price) {
 			localStorage.setItem("cart",  JSON.stringify(pcart));
 			console.log ("Product is added.");
 		}
-		
-
-	
-
-	
 	}
 }
+	// Update Cart
+
+function updateCart() {
+	let cartString = localStorage.getItem("cart");
+	let cart  = JSON.parse(cartString);
+	if(cartString == null || cartString.length == 0) {
+		console.log ("CART IS EMPTY!!");
+	$(".cart-items").html("( 0 )");
+	$(".cart-body").html("<h3>Cart Does not have any items.</h3>");
+	$(".checkout-btn").addClass('disabled');
+	} else {
+		// There is some thing in cart to show
+		console.log (cart);
+	}
+}
+
+
+$(document).ready(function() {
+	updateCart();	
+})
+

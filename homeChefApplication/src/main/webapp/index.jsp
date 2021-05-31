@@ -69,7 +69,7 @@
 							%>
 
 							<!--  Product Card -->
-							<div class="card product-card" style="width: 18rem;">
+							<div class="card product-card">
 								<div class="container text-center">
 									<img src="image/productPics/<%=p.getProductPhoto()%>"
 										class="card-img-top m-2"
@@ -103,6 +103,6 @@
 			</div>
 		</div>
 	</div>
-<%@include file ="components/common_modals.jsp" %>
+
 </body>
 </html>
