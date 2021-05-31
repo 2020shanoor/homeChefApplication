@@ -12,7 +12,8 @@ function add_to_cart(pid, pname, price) {
 		products.push(productEntity);
 
 		localStorage.setItem("cart", JSON.stringify(products));
-		console.log ("Product is added for the first time.");
+		// console.log ("Product is added for the first time.");
+		showToast("Product is added for the first time.");
 	} else {
 		
 		// cat is already present
@@ -27,7 +28,8 @@ function add_to_cart(pid, pname, price) {
 				}
 			})
 			localStorage.setItem("cart",  JSON.stringify(pcart));
-			console.log ("Product quantity is increased.");
+			// console.log ("Product quantity is increased.");
+			showToast(oldProduct.productName + " Quantity is increased. Quantity = "  +oldProduct.productQuantity);
 		} else  {
 			// we have to add the quantity
 			let productEntity = {
@@ -38,7 +40,8 @@ function add_to_cart(pid, pname, price) {
 				};
 			pcart.push(productEntity);
 			localStorage.setItem("cart",  JSON.stringify(pcart));
-			console.log ("Product is added.");
+			// console.log ("Product is added.");
+			showToast("Product is added to cart.");
 		}
 	}
 	
@@ -81,7 +84,7 @@ function updateCart() {
 				<td>${item.productPrice}</td>
 				<td>${item.productQuantity}</td>
 				<td>${item.productQuantity*item.productPrice}</td>
-			<td><button class ='btn btn-danger btn-sm'>Remove</button></td>
+			<td><button onclick ='deleteItemFromCart(${item.productId})' class ='btn btn-danger btn-sm'>Remove</button></td>
 			</tr>
 			
 			`
@@ -98,8 +101,25 @@ function updateCart() {
 	}
 }
 
+// Delete Item in CART
+function deleteItemFromCart(pid) {
+	let cart = JSON.parse(localStorage.getItem('cart'));
+	let newCart = cart.filter((item)=> item.productId != pid)
+	localStorage.setItem('cart',JSON.stringify(newcart))
+	updateCart();	
+	showToast("Product is removed from cart.");
+}
 
 $(document).ready(function() {
 	updateCart();	
 })
+
+function showToast(content) {
+	$("#toast").addClass("display");
+	$("#toast").html(content);
+	setTimeout(() => {
+		$("#toast").removeClass("display");
+	},2000);
+}
+
 
