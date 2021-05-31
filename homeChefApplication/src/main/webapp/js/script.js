@@ -41,6 +41,8 @@ function add_to_cart(pid, pname, price) {
 			console.log ("Product is added.");
 		}
 	}
+	
+	updateCart();
 }
 	// Update Cart
 
@@ -55,6 +57,40 @@ function updateCart() {
 	} else {
 		// There is some thing in cart to show
 		console.log (cart);
+		$(".cart-items").html(`(${cart.length})`);
+		let table =`
+		<table class='table'>
+		<thead class='thread-light'>
+		<tr>
+		<th>Item Name</th>
+				<th>Item Price</th>
+						<th>Item Quantity</th>
+								<th>Total Price</th>
+										<th>Action</th>
+		</tr>
+		
+		</thead>
+		
+		
+		`;
+		cart.map((item)=> {
+			table+=`
+			<tr>
+				<td>${item.productName}</td>
+				<td>${item.productPrice}</td>
+				<td>${item.productQuantity}</td>
+				<td>${item.productQuantity*item.productPrice}</td>
+			<td><button class ='btn btn-danger btn-sm'>Remove</button></td>
+			</tr>
+			
+			`
+			
+		})
+			
+		table =table+`</table>`	
+		$(".cart-body").html(table);
+			
+			
 	}
 }
 
