@@ -30,6 +30,11 @@
 <title>Home Chef- ADMIN</title>
 <%@include file="components/common_css_js.jsp"%>
 </head>
+<style>
+body {
+	background: #e2e2e2;
+}
+</style>
 <body>
 	<%@include file="components/navbar.jsp"%>
 	<div class="container admin">
@@ -42,7 +47,8 @@
 			<div class="col-md-4">
 				<!-- First box -->
 
-				<div class="card">
+				<div class="card" data-toggle="tooltip" data-placement="left"
+					title="Number of Users in this Website.">
 					<div class="card-body text-center">
 						<div class="container">
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
@@ -57,7 +63,8 @@
 			<!-- Second box -->
 			<div class="col-md-4">
 
-				<div class="card">
+				<div class="card" data-toggle="tooltip" data-placement="bottom"
+					title="Total Categories.">
 					<div class="card-body text-center">
 						<div class="container">
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
@@ -71,7 +78,8 @@
 			<!-- Third box -->
 			<div class="col-md-4">
 
-				<div class="card">
+				<div class="card" data-toggle="tooltip" data-placement="right"
+					title="Total Number of Products.">
 					<div class="card-body text-center">
 						<div class="container">
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
@@ -119,11 +127,37 @@
 				</div>
 			</div>
 		</div>
+		<!-- View Products Row -->
+		<div class="row mt-3">
+			<div class="col-md-12">
+				<!-- First box -->
+
+				<div onclick = "window.location='viewProducts.jsp'" class="card">
+					<div class="card-body text-center">
+						<div class="container">
+							<img style="max-width: 125px;" class="img-fluid rounded-circle"
+								alt="View Products" src="image/view.png">
+						</div>
+						<p class="mt-2">Click here to View All the Products.</p>
+						<h1 class="text-uppercase text-muted">View Products</h1>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
 	</div>
 	<!-- Add Category -->
 	<%@include file="addCategory.jsp"%>
 	<%@include file="addProducts.jsp"%>
 	<%@include file="components/common_modals.jsp"%>
+	<script>
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
 	<!-- End Category -->
 </body>
 </html>
