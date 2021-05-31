@@ -1,4 +1,11 @@
 <%@page import="com.src.entity.UserEntity"%>
+<%@page import="com.src.helper.Helper"%>
+<%@page import="java.util.Map"%>
+<%
+	CategoryDAO cDAO = new CategoryDAO(FactoryProvider.getFactory());
+	List<CategoryEntity> listData = cDAO.getCategories();
+	Map<String, Long> m = Helper.getCounts(FactoryProvider.getFactory());
+%>
 <%
 	UserEntity user = (UserEntity) session.getAttribute("current-user");
 	if (user == null) {
@@ -27,7 +34,7 @@
 	<%@include file="components/navbar.jsp"%>
 	<div class="container admin">
 		<div class="container-fluid mt-3">
-		<%@include file="components/message.jsp"%>
+			<%@include file="components/message.jsp"%>
 		</div>
 
 		<div class="row mt-2">
@@ -41,7 +48,7 @@
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
 								alt="User" src="image/user.png">
 						</div>
-						<h1>1231</h1>
+						<h1><%=m.get("userCount")%></h1>
 						<h1 class="text-uppercase text-muted">Users</h1>
 					</div>
 				</div>
@@ -56,7 +63,7 @@
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
 								alt="User" src="image/list.png">
 						</div>
-						<h1>4564</h1>
+						<h1><%=listData.size()%></h1>
 						<h1 class="text-uppercase text-muted">Categories</h1>
 					</div>
 				</div>
@@ -70,7 +77,7 @@
 							<img style="max-width: 125px;" class="img-fluid rounded-circle"
 								alt="User" src="image/product.png">
 						</div>
-						<h1>5751</h1>
+						<h1><%=m.get("productCount")%></h1>
 						<h1 class="text-uppercase text-muted">Products</h1>
 					</div>
 				</div>
@@ -116,6 +123,7 @@
 	<!-- Add Category -->
 	<%@include file="addCategory.jsp"%>
 	<%@include file="addProducts.jsp"%>
+	<%@include file="components/common_modals.jsp"%>
 	<!-- End Category -->
 </body>
 </html>

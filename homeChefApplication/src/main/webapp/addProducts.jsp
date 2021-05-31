@@ -1,4 +1,5 @@
 <!-- Modal -->
+
 <%@page import="com.src.helper.FactoryProvider"%>
 <div class="modal fade" id="add-product-model" tabindex="-1"
 	aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -10,8 +11,9 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form action="adminAddProductCategory" method="post" enctype="multipart/form-data">
-				<input type="hidden" value="addproduct" name="operation" >
+				<form action="adminAddProductCategory" method="post"
+					enctype="multipart/form-data">
+					<input type="hidden" value="addproduct" name="operation">
 					<div class="form-group mt-2">
 						Enter Product Name: <input type="text" name="product_name"
 							placeholder="Please enter Product Name." class="form-control"
@@ -47,10 +49,7 @@
 					<%@page import="com.src.dao.CategoryDAO"%>
 					<%@page import="com.src.entity.CategoryEntity"%>
 					<%@page import="java.util.List"%>
-					<%
-						CategoryDAO cDAO = new CategoryDAO(FactoryProvider.getFactory());
-						List<CategoryEntity> listData = cDAO.getCategories();
-					%>
+
 
 					<div class="form-group mt-2">
 						<label for="category">Enter Product Category:</label> <select

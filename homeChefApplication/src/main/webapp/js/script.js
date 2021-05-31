@@ -52,7 +52,7 @@ function add_to_cart(pid, pname, price) {
 function updateCart() {
 	let cartString = localStorage.getItem("cart");
 	let cart  = JSON.parse(cartString);
-	if(cartString == null || cartString.length == 0) {
+	if(cartString == null || cartString.length == 0 || cart == 0) {
 		console.log ("CART IS EMPTY!!");
 	$(".cart-items").html("( 0 )");
 	$(".cart-body").html("<h3>Cart Does not have any items.</h3>");
@@ -123,4 +123,6 @@ function showToast(content) {
 	},2000);
 }
 
-
+function goToCheckOut() {
+	window.location ="checkOut.jsp"
+}
