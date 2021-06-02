@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Home Chef Service </display-name>
+  <welcome-file-list>
+    <welcome-file>index.jpg</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>UserRegisterController</display-name>
+    <servlet-name>UserRegisterController</servlet-name>
+    <servlet-class>com.src.controller.UserRegisterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserRegisterController</servlet-name>
+    <url-pattern>/userRegisterController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLoginController</display-name>
+    <servlet-name>UserLoginController</servlet-name>
+    <servlet-class>com.src.controller.UserLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginController</servlet-name>
+    <url-pattern>/userLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLogoutController</display-name>
+    <servlet-name>UserLogoutController</servlet-name>
+    <servlet-class>com.src.controller.UserLogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogoutController</servlet-name>
+    <url-pattern>/userLogoutController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminAddProductCategory</display-name>
+    <servlet-name>AdminAddProductCategory</servlet-name>
+    <servlet-class>com.src.controller.AdminAddProductCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminAddProductCategory</servlet-name>
+    <url-pattern>/adminAddProductCategory</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HomeController</display-name>
+    <servlet-name>HomeController</servlet-name>
+    <servlet-class>com.src.controller.HomeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeController</servlet-name>
+    <url-pattern>/homeController</url-pattern>
+  </servlet-mapping>
+</web-app>

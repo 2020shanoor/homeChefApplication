@@ -8,7 +8,7 @@
 <%@include file="components/common_css_js.jsp"%>
 </head>
 <body>
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/loginNavbar.jsp"%>
 	<h1>This is Normal User.</h1>
 </body>
 </html>

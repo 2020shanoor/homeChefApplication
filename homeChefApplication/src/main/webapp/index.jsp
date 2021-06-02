@@ -17,6 +17,12 @@
 <meta charset="ISO-8859-1">
 <title>Home Chef Application - HOME</title>
 <%@include file="components/common_css_js.jsp"%>
+
+<style>
+body {
+	background: #e2e2e2;
+}
+</style>
 </head>
 <body>
 	<%@include file="components/navbar.jsp"%>

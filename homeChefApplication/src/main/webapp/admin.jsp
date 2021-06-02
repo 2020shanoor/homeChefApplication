@@ -36,7 +36,7 @@ body {
 }
 </style>
 <body>
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/loginNavbar.jsp"%>
 	<div class="container admin">
 		<div class="container-fluid mt-3">
 			<%@include file="components/message.jsp"%>
